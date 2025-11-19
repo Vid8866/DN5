@@ -43,14 +43,12 @@ func main() {
 				return fmt.Errorf("minOcena (%.2f) nemore biti vecja od maxOcena (%.2f)", minOc, maxOc)
 			}
 
-			// Apply configuration to package
 			redovalnica.StOcen = stOcen
 			redovalnica.MinOcena = minOc
 			redovalnica.MaxOcena = maxOc
 
 			fmt.Printf("Uporabljena konfiguracija: minStOcen=%d, minOcena=%.2f, maxOcena=%.2f\n", stOcen, minOc, maxOc)
 
-			// Demo: create some students and add grades
 			studenti := make(map[string]redovalnica.Student)
 			studenti["1001"] = redovalnica.NovStudent("Ana", "Novak")
 			studenti["1002"] = redovalnica.NovStudent("Boris", "Kranjc")
